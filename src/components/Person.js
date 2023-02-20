@@ -6,8 +6,9 @@ const Person = (props) => {
     
     const [bday, setBday] = useState({birthdays:age});
 
+
     const happyBirthday = () => {
-        setBday({birthdays: bday+1});
+        setBday({birthdays: bday.birthdays +1});
     }
 
     
@@ -16,7 +17,7 @@ const Person = (props) => {
             <h1>
             {firstName} {lastName}
             </h1>
-            <p>Age: {age}</p>
+            <p>Age: {bday.birthdays}</p>
             <p>hairColor: {hairColor}</p>
             <button onClick={happyBirthday}>Birthday Button for {firstName}{lastName}</button>
         </div>
